@@ -11,12 +11,11 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     if current_user
       flash[:success] = "successfully"
-      user_path(@user)
+      user_path(current_user)
     else
       flash[:success] = "successfully"
-      root_path(@user)
+      root_path(current_user)
     end
-
   end
 
 end
