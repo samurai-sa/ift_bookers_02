@@ -8,14 +8,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:email,:name, :introduction, :profile_image_id])
   end
 
-  def after_sign_in_path_for(resource)
-    if current_user
-      flash[:success] = "successfully"
-      user_path(current_user)
-    else
-      flash[:success] = "successfully"
-      root_path(current_user)
-    end
-  end
-
 end

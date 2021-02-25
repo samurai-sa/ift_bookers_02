@@ -10,13 +10,13 @@
     </div>
   <% end %>
   <div class="row">
-    <div class="col-xs-3">
+    <div class="col-md-3">
       <%= render 'users/profile', users: @users %>
       <div class="mt-3">
         <%= render 'books/form', book: @book %>
       </div>
     </div>
-    <div class="col-xs-9 offset-md-1">
+    <div class="col-md-8 offset-md-1">
       <%= render 'books/list', users: @users %>
     </div>
   </div>
